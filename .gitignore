@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+QUEUE.md
+.DS_Store
