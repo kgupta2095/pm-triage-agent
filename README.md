@@ -2,7 +2,7 @@
 
 **An agentic workflow that turns messy feature requests into classified, spec-stubbed issues, with a human approval gate it cannot skip.**
 
-Every PM inbox fills with raw requests: half bug report, half wish, no acceptance criteria. This repo automates the mechanical part of triage (classify, title, priority, spec stub) and deliberately refuses to automate the judgment part (what actually gets filed). It is a small public version of how I run request-to-backlog automation at work.
+Every PM inbox fills with raw requests: half bug report, half wish, no acceptance criteria. This repo automates the mechanical part of triage (classify, title, priority, spec stub) and deliberately refuses to automate the judgment part (what actually gets filed). It is a small public build on synthetic requests, in the same spirit as the Claude Code skills I use at work to draft PRDs.
 
 Built by [Karan Gupta](https://www.linkedin.com/in/guptakaran786/), AI Product Manager. Companion repo: [spec-to-ship](https://github.com/kgupta2095/spec-to-ship).
 
