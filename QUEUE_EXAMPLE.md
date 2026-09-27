@@ -1,8 +1,9 @@
-# Triage queue (example output, mock mode)
+# Triage queue: example mock-mode output (synthetic requests, keyword rules, no model called)
 
-Mode: mock. Every item starts as Status: PENDING. Review each spec,
+Mode: mock (keyword rules stand in for the model; no model was called).
+Every item starts as Status: PENDING. Review each spec,
 change Status to APPROVED (or REJECTED), then run:
-`python run.py --post --repo owner/name --yes`
+`python3 run.py --post --repo owner/name --yes`
 
 ## 1. [BUG] Hi team, the export button on the reports page
 

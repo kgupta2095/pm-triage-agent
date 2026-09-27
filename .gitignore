@@ -3,3 +3,4 @@ __pycache__/
 .env
 QUEUE.md
 .DS_Store
+.queue-*.tmp

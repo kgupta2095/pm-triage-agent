@@ -24,6 +24,16 @@ def provider():
     return "mock"
 
 
+def model_name():
+    """Name of the model behind the current provider (used to label output)."""
+    p = provider()
+    if p == "anthropic":
+        return ANTHROPIC_MODEL
+    if p == "openai":
+        return OPENAI_MODEL
+    return "keyword rules (no model)"
+
+
 def _post(url, headers, payload):
     req = urllib.request.Request(
         url, data=json.dumps(payload).encode(), headers=headers, method="POST"

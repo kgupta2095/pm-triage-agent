@@ -21,6 +21,16 @@ SPEC_SYSTEM = (
 )
 
 
+TYPES = ("bug", "feature", "bau")
+PRIORITIES = ("high", "medium", "low")
+
+
+def _pick(value, allowed, default):
+    """Keep a model-supplied field only if it is one of the allowed words."""
+    v = str(value).strip().lower()
+    return v if v in allowed else default
+
+
 def classify(request: str) -> dict:
     raw = complete(CLASSIFY_SYSTEM, f"REQUEST:\n{request}", max_tokens=200)
     try:
@@ -28,10 +38,13 @@ def classify(request: str) -> dict:
         data = json.loads(raw[start:end])
     except (ValueError, json.JSONDecodeError):
         data = {}
+    if not isinstance(data, dict):
+        data = {}
+    title = " ".join(str(data.get("title") or request.strip().split("\n")[0][:70]).split())
     return {
-        "type": data.get("type", "feature"),
-        "priority": data.get("priority", "medium"),
-        "title": data.get("title", request.strip().split("\n")[0][:70]),
+        "type": _pick(data.get("type", "feature"), TYPES, "feature"),
+        "priority": _pick(data.get("priority", "medium"), PRIORITIES, "medium"),
+        "title": title or "Untitled request",
     }
 
 
