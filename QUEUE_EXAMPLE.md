@@ -77,7 +77,7 @@ Priority: high
 Status: PENDING
 
 ### Problem
-The mobile app shows the wrong timezone for shift start times for anyone outside the head office region. A carer in Perth saw 11am for a shift that is actually 8am local. This is causing missed visits.
+The mobile app shows the wrong timezone for shift start times for anyone outside the head office region. A technician in Perth saw 11am for a shift that is actually 8am local. This is causing missed appointments.
 
 ### Proposed scope
 - Reproduce or validate the request against current behaviour
@@ -93,13 +93,13 @@ The mobile app shows the wrong timezone for shift start times for anyone outside
 - Which users or accounts are affected, and how many?
 - Is there a workaround today?
 
-## 5. [FEATURE] We keep getting asked for a way to bulk-assign
+## 5. [FEATURE] We keep getting asked for a way to bulk-reassign
 
 Priority: medium  
 Status: PENDING
 
 ### Problem
-We keep getting asked for a way to bulk-assign clients to a coordinator when someone goes on leave. Today it is one at a time and takes an hour for big caseloads.
+We keep getting asked for a way to bulk-reassign accounts to another account manager when someone goes on leave. Today it is one at a time and takes an hour for big portfolios.
 
 ### Proposed scope
 - Reproduce or validate the request against current behaviour
